@@ -12,24 +12,20 @@
 }
 .page {
   margin: 0 auto;
-  width: 840px;
+  width: 61%;
   margin-bottom: 150px;
 }
 .header {
   margin-top: 80px;
-  height: 270px;
   background-color: #F0F0F0;
   &__image {
     margin: 20px 20px 20px 30px;
     float: left;
   }
   &__content {
-    padding-top: 1px;
-    padding-right: 10px;
-    text-align: left;
+padding: 15px 10px 20px 25px;
   }
   &__content_title {
-    margin-top: 15px;
     font-size: 24px;
     font-family: Arial;
     font-weight: bold;
@@ -38,11 +34,14 @@
     @include content-text;
   }
   &__content_button {
-  color: #FEFEFE;
-  margin-top: 10px;
-  background: linear-gradient(to top, #B4362E, #D84037);
-  width: 115px;
-  height: 30px;
+    border-radius: 2px;
+    margin-top: 10px;
+    display: inline-block;
+    padding: 8px 25px 7px 25px;
+    color: #FEFEFE;
+    font-family: Arial;
+    font-size: 12px;
+    background: linear-gradient(to top, #B4362E, #D84037);
   }
 }
 .content {
@@ -50,9 +49,45 @@
   @include content-title;
   }
   &__text {
+
   @include content-text;
   }
   &__icons {
     margin: 30px 0 30px 0;
   }
+  &__icons_icon1,
+  &__icons_icon2,
+  &__icons_icon3,
+  &__icons_icon4
+    {
+   height: 45px;
+    float: left;
+  }
+  &__icons_text1,
+  &__icons_text2,
+  &__icons_text3,
+  &__icons_text4
+    {
+    width: 50%;
+    margin: 6px 0 0 0;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 18px;
+    float: left;
+  }
+  &__icons_pair1,
+  &__icons_pair2,
+  &__icons_pair3,
+  &__icons_pair4
+    {
+  margin: 5px 0 5px 0;
+  float: left;
+  }
+}
+.content__icons::after,
+.header::after
+{
+    content:'';
+    display:block;
+    clear: both;
 }
